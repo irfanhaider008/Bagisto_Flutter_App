@@ -1,0 +1,292 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'order_refund_model.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
+
+OrderRefundModel _$OrderRefundModelFromJson(Map<String, dynamic> json) =>
+    OrderRefundModel(
+      viewRefunds: (json['data'] as List<dynamic>?)
+          ?.map((e) => ViewRefunds.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    )
+      ..success = json['success'] as String?
+      ..status = json['status'] as bool?
+      ..message = json['message'] as String?
+      ..cartCount = (json['cartCount'] as num?)?.toInt()
+      ..error = json['error'];
+
+Map<String, dynamic> _$OrderRefundModelToJson(OrderRefundModel instance) =>
+    <String, dynamic>{
+      'success': instance.success,
+      'status': instance.status,
+      'message': instance.message,
+      'cartCount': instance.cartCount,
+      'error': instance.error,
+      'data': instance.viewRefunds,
+    };
+
+ViewRefunds _$ViewRefundsFromJson(Map<String, dynamic> json) => ViewRefunds(
+      id: (json['id'] as num?)?.toInt(),
+      incrementId: json['incrementId'],
+      state: json['state'] as String?,
+      emailSent: (json['emailSent'] as num?)?.toInt(),
+      totalQty: (json['totalQty'] as num?)?.toInt(),
+      baseCurrencyCode: json['baseCurrencyCode'] as String?,
+      channelCurrencyCode: json['channelCurrencyCode'] as String?,
+      orderCurrencyCode: json['orderCurrencyCode'] as String?,
+      adjustmentRefund: (json['adjustmentRefund'] as num?)?.toInt(),
+      baseAdjustmentRefund: (json['baseAdjustmentRefund'] as num?)?.toInt(),
+      adjustmentFee: (json['adjustmentFee'] as num?)?.toInt(),
+      baseAdjustmentFee: (json['baseAdjustmentFee'] as num?)?.toInt(),
+      subTotal: (json['subTotal'] as num?)?.toInt(),
+      baseSubTotal: (json['baseSubTotal'] as num?)?.toInt(),
+      grandTotal: (json['grandTotal'] as num?)?.toInt(),
+      baseGrandTotal: (json['baseGrandTotal'] as num?)?.toInt(),
+      shippingAmount: (json['shippingAmount'] as num?)?.toInt(),
+      baseShippingAmount: (json['baseShippingAmount'] as num?)?.toInt(),
+      taxAmount: (json['taxAmount'] as num?)?.toInt(),
+      baseTaxAmount: (json['baseTaxAmount'] as num?)?.toInt(),
+      discountPercent: (json['discountPercent'] as num?)?.toInt(),
+      discountAmount: (json['discountAmount'] as num?)?.toInt(),
+      baseDiscountAmount: (json['baseDiscountAmount'] as num?)?.toInt(),
+      orderId: (json['orderId'] as num?)?.toInt(),
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => RefundItems.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      order: json['order'] == null
+          ? null
+          : Order.fromJson(json['order'] as Map<String, dynamic>),
+      formattedPrice: json['formattedPrice'] == null
+          ? null
+          : FormattedPrice.fromJson(
+              json['formattedPrice'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$ViewRefundsToJson(ViewRefunds instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'incrementId': instance.incrementId,
+      'state': instance.state,
+      'emailSent': instance.emailSent,
+      'totalQty': instance.totalQty,
+      'baseCurrencyCode': instance.baseCurrencyCode,
+      'channelCurrencyCode': instance.channelCurrencyCode,
+      'orderCurrencyCode': instance.orderCurrencyCode,
+      'adjustmentRefund': instance.adjustmentRefund,
+      'baseAdjustmentRefund': instance.baseAdjustmentRefund,
+      'adjustmentFee': instance.adjustmentFee,
+      'baseAdjustmentFee': instance.baseAdjustmentFee,
+      'subTotal': instance.subTotal,
+      'baseSubTotal': instance.baseSubTotal,
+      'grandTotal': instance.grandTotal,
+      'baseGrandTotal': instance.baseGrandTotal,
+      'shippingAmount': instance.shippingAmount,
+      'baseShippingAmount': instance.baseShippingAmount,
+      'taxAmount': instance.taxAmount,
+      'baseTaxAmount': instance.baseTaxAmount,
+      'discountPercent': instance.discountPercent,
+      'discountAmount': instance.discountAmount,
+      'baseDiscountAmount': instance.baseDiscountAmount,
+      'orderId': instance.orderId,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+      'formattedPrice': instance.formattedPrice,
+      'items': instance.items,
+      'order': instance.order,
+    };
+
+RefundItems _$RefundItemsFromJson(Map<String, dynamic> json) => RefundItems(
+      id: (json['id'] as num?)?.toInt(),
+      name: json['name'] as String?,
+      description: json['description'],
+      sku: json['sku'] as String?,
+      qty: (json['qty'] as num?)?.toInt(),
+      price: (json['price'] as num?)?.toInt(),
+      basePrice: (json['basePrice'] as num?)?.toInt(),
+      total: (json['total'] as num?)?.toInt(),
+      baseTotal: (json['baseTotal'] as num?)?.toInt(),
+      taxAmount: (json['taxAmount'] as num?)?.toInt(),
+      baseTaxAmount: (json['baseTaxAmount'] as num?)?.toInt(),
+      discountPercent: (json['discountPercent'] as num?)?.toInt(),
+      discountAmount: (json['discountAmount'] as num?)?.toInt(),
+      baseDiscountAmount: (json['baseDiscountAmount'] as num?)?.toInt(),
+      productId: (json['productId'] as num?)?.toInt(),
+      productType: json['productType'] as String?,
+      orderItemId: (json['orderItemId'] as num?)?.toInt(),
+      refundId: (json['refundId'] as num?)?.toInt(),
+      parentId: json['parentId'],
+      additional: json['additional'] == null
+          ? null
+          : Additional.fromJson(json['additional'] as Map<String, dynamic>),
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+      product: json['product'] == null
+          ? null
+          : OrderProduct.fromJson(json['product'] as Map<String, dynamic>),
+      formattedPrice: json['formattedPrice'] == null
+          ? null
+          : FormattedPrice.fromJson(
+              json['formattedPrice'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$RefundItemsToJson(RefundItems instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'description': instance.description,
+      'sku': instance.sku,
+      'qty': instance.qty,
+      'price': instance.price,
+      'basePrice': instance.basePrice,
+      'total': instance.total,
+      'baseTotal': instance.baseTotal,
+      'taxAmount': instance.taxAmount,
+      'baseTaxAmount': instance.baseTaxAmount,
+      'discountPercent': instance.discountPercent,
+      'discountAmount': instance.discountAmount,
+      'baseDiscountAmount': instance.baseDiscountAmount,
+      'productId': instance.productId,
+      'productType': instance.productType,
+      'orderItemId': instance.orderItemId,
+      'refundId': instance.refundId,
+      'parentId': instance.parentId,
+      'additional': instance.additional,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+      'product': instance.product,
+      'formattedPrice': instance.formattedPrice,
+    };
+
+Order _$OrderFromJson(Map<String, dynamic> json) => Order(
+      id: (json['id'] as num?)?.toInt(),
+      incrementId: json['incrementId'] as String?,
+      status: json['status'] as String?,
+      channelName: json['channelName'] as String?,
+      isGuest: (json['isGuest'] as num?)?.toInt(),
+      customerEmail: json['customerEmail'] as String?,
+      customerFirstName: json['customerFirstName'] as String?,
+      customerLastName: json['customerLastName'] as String?,
+      customerCompanyName: json['customerCompanyName'],
+      customerVatId: json['customerVatId'],
+      shippingMethod: json['shippingMethod'] as String?,
+      shippingTitle: json['shippingTitle'] as String?,
+      shippingDescription: json['shippingDescription'] as String?,
+      couponCode: json['couponCode'],
+      isGift: (json['isGift'] as num?)?.toInt(),
+      totalItemCount: (json['totalItemCount'] as num?)?.toInt(),
+      totalQtyOrdered: (json['totalQtyOrdered'] as num?)?.toInt(),
+      baseCurrencyCode: json['baseCurrencyCode'] as String?,
+      channelCurrencyCode: json['channelCurrencyCode'] as String?,
+      orderCurrencyCode: json['orderCurrencyCode'] as String?,
+      grandTotal: (json['grandTotal'] as num?)?.toInt(),
+      baseGrandTotal: (json['baseGrandTotal'] as num?)?.toInt(),
+      grandTotalInvoiced: (json['grandTotalInvoiced'] as num?)?.toInt(),
+      baseGrandTotalInvoiced: (json['baseGrandTotalInvoiced'] as num?)?.toInt(),
+      grandTotalRefunded: (json['grandTotalRefunded'] as num?)?.toInt(),
+      baseGrandTotalRefunded: (json['baseGrandTotalRefunded'] as num?)?.toInt(),
+      subTotal: (json['subTotal'] as num?)?.toInt(),
+      baseSubTotal: (json['baseSubTotal'] as num?)?.toInt(),
+      subTotalInvoiced: (json['subTotalInvoiced'] as num?)?.toInt(),
+      baseSubTotalInvoiced: (json['baseSubTotalInvoiced'] as num?)?.toInt(),
+      subTotalRefunded: (json['subTotalRefunded'] as num?)?.toInt(),
+      baseSubTotalRefunded: (json['baseSubTotalRefunded'] as num?)?.toInt(),
+      discountPercent: (json['discountPercent'] as num?)?.toInt(),
+      discountAmount: (json['discountAmount'] as num?)?.toInt(),
+      baseDiscountAmount: (json['baseDiscountAmount'] as num?)?.toInt(),
+      discountInvoiced: (json['discountInvoiced'] as num?)?.toInt(),
+      baseDiscountInvoiced: (json['baseDiscountInvoiced'] as num?)?.toInt(),
+      discountRefunded: (json['discountRefunded'] as num?)?.toInt(),
+      baseDiscountRefunded: (json['baseDiscountRefunded'] as num?)?.toInt(),
+      taxAmount: (json['taxAmount'] as num?)?.toInt(),
+      baseTaxAmount: (json['baseTaxAmount'] as num?)?.toInt(),
+      taxAmountInvoiced: (json['taxAmountInvoiced'] as num?)?.toInt(),
+      baseTaxAmountInvoiced: (json['baseTaxAmountInvoiced'] as num?)?.toInt(),
+      taxAmountRefunded: (json['taxAmountRefunded'] as num?)?.toInt(),
+      baseTaxAmountRefunded: (json['baseTaxAmountRefunded'] as num?)?.toInt(),
+      shippingAmount: (json['shippingAmount'] as num?)?.toInt(),
+      baseShippingAmount: (json['baseShippingAmount'] as num?)?.toInt(),
+      shippingInvoiced: (json['shippingInvoiced'] as num?)?.toInt(),
+      baseShippingInvoiced: (json['baseShippingInvoiced'] as num?)?.toInt(),
+      shippingRefunded: (json['shippingRefunded'] as num?)?.toInt(),
+      baseShippingRefunded: (json['baseShippingRefunded'] as num?)?.toInt(),
+      customerId: (json['customerId'] as num?)?.toInt(),
+      customerType: json['customerType'] as String?,
+      channelId: (json['channelId'] as num?)?.toInt(),
+      channelType: json['channelType'] as String?,
+      cartId: json['cartId'] as String?,
+      appliedCartRuleIds: json['appliedCartRuleIds'] as String?,
+      shippingDiscountAmount: (json['shippingDiscountAmount'] as num?)?.toInt(),
+      baseShippingDiscountAmount:
+          (json['baseShippingDiscountAmount'] as num?)?.toInt(),
+      createdAt: json['createdAt'] as String?,
+      updatedAt: json['updatedAt'] as String?,
+    );
+
+Map<String, dynamic> _$OrderToJson(Order instance) => <String, dynamic>{
+      'id': instance.id,
+      'incrementId': instance.incrementId,
+      'status': instance.status,
+      'channelName': instance.channelName,
+      'isGuest': instance.isGuest,
+      'customerEmail': instance.customerEmail,
+      'customerFirstName': instance.customerFirstName,
+      'customerLastName': instance.customerLastName,
+      'customerCompanyName': instance.customerCompanyName,
+      'customerVatId': instance.customerVatId,
+      'shippingMethod': instance.shippingMethod,
+      'shippingTitle': instance.shippingTitle,
+      'shippingDescription': instance.shippingDescription,
+      'couponCode': instance.couponCode,
+      'isGift': instance.isGift,
+      'totalItemCount': instance.totalItemCount,
+      'totalQtyOrdered': instance.totalQtyOrdered,
+      'baseCurrencyCode': instance.baseCurrencyCode,
+      'channelCurrencyCode': instance.channelCurrencyCode,
+      'orderCurrencyCode': instance.orderCurrencyCode,
+      'grandTotal': instance.grandTotal,
+      'baseGrandTotal': instance.baseGrandTotal,
+      'grandTotalInvoiced': instance.grandTotalInvoiced,
+      'baseGrandTotalInvoiced': instance.baseGrandTotalInvoiced,
+      'grandTotalRefunded': instance.grandTotalRefunded,
+      'baseGrandTotalRefunded': instance.baseGrandTotalRefunded,
+      'subTotal': instance.subTotal,
+      'baseSubTotal': instance.baseSubTotal,
+      'subTotalInvoiced': instance.subTotalInvoiced,
+      'baseSubTotalInvoiced': instance.baseSubTotalInvoiced,
+      'subTotalRefunded': instance.subTotalRefunded,
+      'baseSubTotalRefunded': instance.baseSubTotalRefunded,
+      'discountPercent': instance.discountPercent,
+      'discountAmount': instance.discountAmount,
+      'baseDiscountAmount': instance.baseDiscountAmount,
+      'discountInvoiced': instance.discountInvoiced,
+      'baseDiscountInvoiced': instance.baseDiscountInvoiced,
+      'discountRefunded': instance.discountRefunded,
+      'baseDiscountRefunded': instance.baseDiscountRefunded,
+      'taxAmount': instance.taxAmount,
+      'baseTaxAmount': instance.baseTaxAmount,
+      'taxAmountInvoiced': instance.taxAmountInvoiced,
+      'baseTaxAmountInvoiced': instance.baseTaxAmountInvoiced,
+      'taxAmountRefunded': instance.taxAmountRefunded,
+      'baseTaxAmountRefunded': instance.baseTaxAmountRefunded,
+      'shippingAmount': instance.shippingAmount,
+      'baseShippingAmount': instance.baseShippingAmount,
+      'shippingInvoiced': instance.shippingInvoiced,
+      'baseShippingInvoiced': instance.baseShippingInvoiced,
+      'shippingRefunded': instance.shippingRefunded,
+      'baseShippingRefunded': instance.baseShippingRefunded,
+      'customerId': instance.customerId,
+      'customerType': instance.customerType,
+      'channelId': instance.channelId,
+      'channelType': instance.channelType,
+      'cartId': instance.cartId,
+      'appliedCartRuleIds': instance.appliedCartRuleIds,
+      'shippingDiscountAmount': instance.shippingDiscountAmount,
+      'baseShippingDiscountAmount': instance.baseShippingDiscountAmount,
+      'createdAt': instance.createdAt,
+      'updatedAt': instance.updatedAt,
+    };
